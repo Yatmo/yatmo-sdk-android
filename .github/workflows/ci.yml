@@ -16,7 +16,7 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-      - uses: android-actions/setup-android@v3
+      # The ubuntu-latest image ships the Android SDK (platform 34, build-tools 34) at ANDROID_HOME.
       - name: Test licence key for the example (optional secret)
         run: echo "yatmo.licenseKey=${{ secrets.YATMO_TEST_LICENSE_KEY }}" >> local.properties
       - name: Build
