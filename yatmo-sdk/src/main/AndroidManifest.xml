@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Tiles, styles, POI icons and the API are all fetched over HTTPS. No location permission is needed. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

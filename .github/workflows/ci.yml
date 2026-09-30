@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+
+jobs:
+  build:
+    name: Build library and example
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: android-actions/setup-android@v3
+      - name: Test licence key for the example (optional secret)
+        run: echo "yatmo.licenseKey=${{ secrets.YATMO_TEST_LICENSE_KEY }}" >> local.properties
+      - name: Build
+        run: ./gradlew :yatmo-sdk:assembleRelease :example:assembleDebug --no-daemon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: yatmo-sdk-release-aar
+          path: yatmo-sdk/build/outputs/aar/yatmo-sdk-release.aar
