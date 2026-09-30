@@ -1,7 +1,7 @@
 # Yatmo SDK for Android
 
 [![CI](https://github.com/yatmo/yatmo-sdk-android/actions/workflows/ci.yml/badge.svg)](https://github.com/yatmo/yatmo-sdk-android/actions/workflows/ci.yml)
-[![JitPack](https://jitpack.io/v/yatmo/yatmo-sdk-android.svg)](https://jitpack.io/#yatmo/yatmo-sdk-android)
+[![JitPack](https://jitpack.io/v/Yatmo/yatmo-sdk-android.svg)](https://jitpack.io/#Yatmo/yatmo-sdk-android)
 ![minSdk 24](https://img.shields.io/badge/minSdk-24-blue.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -30,7 +30,7 @@ dependencyResolutionManagement {
 
 // app/build.gradle.kts
 dependencies {
-    implementation("com.github.yatmo.yatmo-sdk-android:yatmo-sdk:1.0.0")
+    implementation("com.github.Yatmo:yatmo-sdk-android:v1.0.0")
 }
 ```
 
